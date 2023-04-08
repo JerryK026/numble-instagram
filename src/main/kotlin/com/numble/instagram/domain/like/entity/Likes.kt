@@ -1,17 +1,15 @@
-package com.numble.instagram.domain.member.entity
+package com.numble.instagram.domain.like.entity
 
+import com.numble.instagram.domain.post.entity.Post
 import com.numble.instagram.global.entity.BaseEntity
 import jakarta.persistence.*
 
 @Entity
-class Follower(
+class Likes(
     @ManyToOne
-    val member: Member,
-
-    @ManyToOne
-    val follower: Member,
+    val post: Post,
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long?= null,
+    val id: Long ?= null,
 ) : BaseEntity()
