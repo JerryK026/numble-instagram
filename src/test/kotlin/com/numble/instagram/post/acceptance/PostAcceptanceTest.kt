@@ -1,7 +1,6 @@
 package com.numble.instagram.post.acceptance
 
 import com.numble.instagram.domain.post.application.PostCreateFacade
-import com.numble.instagram.domain.post.dto.request.PostCreateRequest
 import com.numble.instagram.global.fakeMultipartFileUrlFactory
 import com.numble.instagram.infra.FakeMultipartFile
 import org.assertj.core.api.Assertions.assertThat
@@ -24,8 +23,8 @@ class PostAcceptanceTest @Autowired constructor(
 
         // when
         val response = postCreateFacade.create(
-            PostCreateRequest(
-                FakeMultipartFile(FILENAME.toByteArray(), FILENAME), CONTENT)
+            CONTENT,
+            FakeMultipartFile(FILENAME.toByteArray(), FILENAME)
         )
 
         // then

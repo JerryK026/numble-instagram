@@ -1,4 +1,4 @@
-package com.numble.instagram.domain.post.entity
+package com.numble.instagram.domain.post.domain
 
 import com.numble.instagram.domain.member.entity.Member
 import com.numble.instagram.global.entity.BaseEntity
@@ -14,8 +14,11 @@ class Post(
 
     val imageUrl: String,
 
+    /* TODO: 잠시 봉인해둔 뒤 JWT 구현 후 추가 구현
     @ManyToOne
     val member: Member,
+
+     */
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

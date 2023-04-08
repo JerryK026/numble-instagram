@@ -1,4 +1,4 @@
-package com.numble.instagram.service
+package com.numble.instagram.post.service
 
 import com.numble.instagram.domain.post.domain.Post
 import com.numble.instagram.domain.post.dao.PostRepository
