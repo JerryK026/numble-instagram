@@ -6,6 +6,6 @@ import com.fasterxml.jackson.databind.annotation.JsonNaming
 @JsonNaming(value = SnakeCaseStrategy::class)
 data class PostCreateResponse(
     val id: Long,
-    val imageUrl: String,
+    val imageUrl: String?,
     val content: String,
 )

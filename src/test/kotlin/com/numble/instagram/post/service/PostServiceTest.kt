@@ -3,6 +3,7 @@ package com.numble.instagram.post.service
 import com.numble.instagram.domain.post.application.PostService
 import com.numble.instagram.domain.post.domain.Post
 import com.numble.instagram.domain.post.dao.PostRepository
+import com.numble.instagram.domain.post.dto.request.PostUpdateRequest
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
@@ -34,7 +35,7 @@ class PostServiceTest @Autowired constructor(
     fun editPostTest() {
         // given
         val post = postRepository.save(Post("content", "imageUrl"))
-        val response = postService.editPost(PostEditRequest(Post("newContent", "newImageUrl", post.id)))
+        val response = postService.updatePost(PostUpdateRequest(post.id!!, "newContent", "newImageUrl"))
 
         // when & then
         val foundPost: Post? = postRepository.findByIdOrNull(response.id)
