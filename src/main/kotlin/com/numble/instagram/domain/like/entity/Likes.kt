@@ -1,6 +1,6 @@
 package com.numble.instagram.domain.like.entity
 
-import com.numble.instagram.domain.post.entity.Post
+import com.numble.instagram.domain.post.domain.Post
 import com.numble.instagram.global.entity.BaseEntity
 import jakarta.persistence.*
 
