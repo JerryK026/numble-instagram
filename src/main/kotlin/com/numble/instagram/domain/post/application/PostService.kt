@@ -26,4 +26,9 @@ class PostService(
         post.update(request.content, request.imageUrl)
         return PostCreateResponse(post.id!!, post.imageUrl, post.content)
     }
+
+    @Transactional
+    fun delete(id: Long) {
+        postRepository.deleteById(id)
+    }
 }
